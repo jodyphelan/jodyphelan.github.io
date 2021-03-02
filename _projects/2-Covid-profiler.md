@@ -8,12 +8,12 @@ tags:
     - NGS
     - Python
 ---
-{% include figure.html url="http://genomics.lshtm.ac.uk/static/covid_profiler_logo.png" description="" %}
+{% include figure.html url="/assets/img/covid-profiler-logo.png" description="" %}
 
 
 # About
 
- COVID-Profiler is a collection of tools which allow users to analyse Sars-Cov-2 sequencing and immunological data. Here is a non exaustive list of features:
+ COVID-Profiler is a collection of tools which allow users to analyse Sars-Cov-2 sequencing and immunological data. It is available as a command line tool or as as webserver. A non exhaustive list of features includes:
 
  * Alignment and visualisation
  * Variant calling and functional annotation
@@ -22,19 +22,19 @@ tags:
 
 <div class="row">
     <div class="col-md-4">
-        <img src="http://genomics.lshtm.ac.uk/static/example_pileup.png">
+        <img src="/assets/img/example_pileup.png">
     </div>
     <div class="col-md-4">
-        <img src="http://genomics.lshtm.ac.uk/static/example_phylogeny.png">
+        <img src="/assets/img/example_phylogeny.png">
     </div>
     <div class="col-md-4">
-        <img src="http://genomics.lshtm.ac.uk/static/primer_map.png">
+        <img src="/assets/img/primer_map.png">
     </div>
 </div>
 
 # Development
 
-The pipeline is developed using python. Sequences are aligned to the reference genome (NC_045512.2) using minimap2  Variants are called using paftools.js from the minimap2 package and bcftools and transformed into a fasta alignment. IQ-TREE is used to reconstruct the phylogeny. Sample data is downloaded from NCBI nucleotide database using Entrez Direct. The website is built using flask. All the code is available from [here](https://github.com/jodyphelan/covid-profiler).
+The pipeline is developed using python. Sequences are aligned to the reference genome (NC_045512.2) using minimap2  Variants are called using paftools.js from the minimap2 package and bcftools and transformed into a fasta alignment. IQ-TREE is used to reconstruct the phylogeny. Sample data is downloaded from NCBI nucleotide database using Entrez Direct. The website is built using flask using celery and redis to interface with the backend command line scripts. All the code is available from [here](https://github.com/jodyphelan/covid-profiler).
 
 # Citation
 
