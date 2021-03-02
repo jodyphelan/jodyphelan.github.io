@@ -8,8 +8,8 @@ tags:
     - NGS
     - Python
 ---
+{% include figure.html url="http://genomics.lshtm.ac.uk/static/covid_profiler_logo.png" description="" %}
 
-<img src="http://genomics.lshtm.ac.uk/static/covid_profiler_logo.png" width="100%" class="m-3">
 
 # About
 
