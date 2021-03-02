@@ -1,0 +1,88 @@
+---
+layout: default
+title: Home
+---
+<h1>About me</h1>
+<div class="row">
+    <div class="col-md-2">
+        <img class="rounded-circle img-fluid" src="https://avatars.githubusercontent.com/u/8697224?s=460&u=08d95bee19f20f59da761c00096012a32389f740&v=4" alt="">
+    </div>
+    <div class="col-md-10">
+        <div class="pt-2">
+            I am an assistant professor at the London School of Hygiene and Tropical Medicine.
+        </div>
+
+        <div class="pt-2">
+            Most of my time is spent looking at the genomic diversity of Mycobacterium tuberculosis using next generation sequencing as part of the pathogenseq group.
+        </div>
+
+        <div class="pt-2">
+            My research entails the design and implementation of data analysis pipelines to process and collate terabytes of data from various structured and unstructured sources to provide biological insights such as population structure, transmission and drug resistance
+        </div>
+
+        <div class="">
+
+        </div>
+
+        <div class="pt-2">
+            I code in
+            <span class="badge badge-primary">Python</span>
+            <span class="badge badge-warning">R</span>
+            <span class="badge badge-info">Perl</span>
+            <span class="badge badge-danger">Javascript</span> and
+            <span class="badge badge-success">html</span>
+            (also learning <span class="badge badge-dark">Rust</span>).
+        </div>
+    </div>
+</div>
+<hr>
+
+<div class="pt-4 pb-2">
+    <h1>Selected Projects</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+
+        {% for project in site.projects %}
+            <div class="card border-dark m-4 " style="width: 18rem;">
+                <div class="row m-1 " style="height: 250px;">
+                    <div class="col-sm-12 my-auto">
+                        <img class="card-img-top img-fluid" src="{{project.img}}" alt="Card image cap">
+                    </div>
+                </div>
+                <hr>
+                <div class="card-body">
+                    <h5 class="card-title">{{project.name}}</h5>
+                    <p class="card-text">{{project.intro}}</p>
+                    <a href="{{project.url}}" class="btn btn-dark">More info</a>
+                </div>
+                <div class="card-footer text-muted">
+                    {% for tag in project.tags %}
+                        <span class="badge badge-pill badge-dark">{{tag}}</span>
+                    {%endfor%}
+                </div>
+            </div>
+          {% endfor %}
+    </div>
+</div>
+<hr>
+
+<div class="row">
+    <div class="col-md-10">
+        <h2>Contact me</h2>
+        <form action="https://send.pageclip.co/1VxRONd65ZuIP74nmOy9VK8bNPwh42aK/contact-form" class="pageclip-form" method="post">
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Email address</label>
+                <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Your message</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-dark pageclip-form__submit"><span>Send</span></button>
+        </form>
+    </div>
+</div>
+<hr>
